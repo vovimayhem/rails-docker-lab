@@ -26,5 +26,6 @@ services:
       target: 3000
     volumes:
     - .:/usr/src
+    entrypoint: /usr/src/bin/dev-entrypoint
     environment:
       DATABASE_URL: postgres://postgres:3x4mpl3@postgres:5432/demo_development
