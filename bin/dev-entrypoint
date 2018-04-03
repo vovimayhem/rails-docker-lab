@@ -39,7 +39,7 @@ then
   # We'll use a custom script `checkdb` (inside our app's `bin` folder), instead
   # of running `rails db:version` to avoid loading the entire rails app for this
   # simple check:
-  bundle exec ${APP_PATH}/bin/checkdb || rails db:create ops:ensure_app_schema_exists db:schema:load db:seed
+  bundle exec ${APP_PATH}/bin/checkdb || rails db:setup
 
   # 7: 'Unlock' the setup process:
   unlock_setup
